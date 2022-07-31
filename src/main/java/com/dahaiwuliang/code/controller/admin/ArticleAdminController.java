@@ -70,8 +70,6 @@ public class ArticleAdminController {
         resultMap.put("data",articleService.list(s_article,nickname,s_bpublishDate,s_epublishDate,page,pageSize, Sort.Direction.DESC,"publishDate"));
         resultMap.put("total",articleService.getCount(s_article,nickname,s_bpublishDate,s_epublishDate));
         resultMap.put("errorNo",0);
-
-        System.out.println();
         return resultMap;
     }
 
