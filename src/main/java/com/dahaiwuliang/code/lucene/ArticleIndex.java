@@ -137,7 +137,10 @@ public class ArticleIndex {
      * 查询资源无高亮列表
      */
     public List<Article> searchNoHighLighter(String q) throws IOException, ParseException {
+
         q = q.replaceAll("[^0-9a-zA-Z\u4e00-\u9fa5]", "");
+
+
         dir = FSDirectory.open(Paths.get(lucenePath));
         IndexReader reader = DirectoryReader.open(dir);
         IndexSearcher is = new IndexSearcher(reader);
